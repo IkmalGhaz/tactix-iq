@@ -92,14 +92,18 @@ function AnalysisView({ opponentId, briefReady, onBriefReady }) {
           </div>
         </div>
 
-        {/* Stat chips */}
-        <div className="grid grid-cols-2 gap-3">
-          <StatChip label="Press PPDA"    value={opp.stats['Press PPDA'].value}       sub={opp.stats['Press PPDA'].label}       accent="rose"    />
-          <StatChip label="High Line"     value={opp.stats['High Line Depth'].value}  sub={opp.stats['High Line Depth'].label}  accent="amber"   />
-          <StatChip label="FB Overlap"    value={opp.stats['Fullback Overlap'].value} sub={opp.stats['Fullback Overlap'].label} accent="violet"  />
-          <StatChip label="xG Against"    value={opp.stats['xG Against'].value}       sub={opp.stats['xG Against'].label}       accent="emerald" />
-        </div>
-
+       {/* Stat chips */}
+<div className="grid grid-cols-2 gap-3">
+  {Object.entries(opp.stats).slice(0, 4).map(([key, val], i) => (
+    <StatChip
+      key={key}
+      label={key}
+      value={val.value}
+      sub={val.label}
+      accent={['rose','amber','violet','emerald'][i]}
+    />
+  ))}
+</div>
         {/* Foundry terminal */}
         <FoundryTerminal opponentId={opponentId} onComplete={onBriefReady} />
       </div>

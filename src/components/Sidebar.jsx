@@ -16,10 +16,13 @@ const NavIcon = ({ type, active }) => {
 
 export default function Sidebar({ active, setActive, opponent, setOpponent }) {
   const opponents = [
-    // CRITICAL FIX: IDs are perfectly matched to data.js keys in lowercase!
-    { id: 'brazil',  name: 'Brazil',   color: '#FFDF00' },
-    { id: 'morocco', name: 'Morocco',  color: '#C1272D' },
-  ]
+  { id: 'brazil',    name: 'Brazil',    color: '#FFDF00' },
+  { id: 'france',    name: 'France',    color: '#002395' },
+  { id: 'argentina', name: 'Argentina', color: '#75AADB' },
+  { id: 'spain',     name: 'Spain',     color: '#FF0000' },
+  { id: 'england',   name: 'England',   color: '#FFFFFF' },
+  { id: 'germany',   name: 'Germany',   color: '#DD0000' },
+]
 
   return (
     <aside className="w-60 shrink-0 flex flex-col bg-[#070b11] border-r border-white/[0.06] h-full">
