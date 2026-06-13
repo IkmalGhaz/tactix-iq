@@ -54,7 +54,7 @@ function StatChip({ label, value, sub, accent = 'emerald' }) {
 function AnalysisView({ opponentId, briefReady, onBriefReady }) {
   const opp = OPPONENTS[opponentId]
   const formation = briefReady
-    ? (opponentId === 'liverpool' ? '3-4-3' : '5-3-2')
+    ? (opponentId === 'brazil' ? '3-4-3' : '4-3-3')
     : '4-3-3'
 
   return (
@@ -113,12 +113,12 @@ function AnalysisView({ opponentId, briefReady, onBriefReady }) {
               <div className="flex-1">
                 <p className="text-emerald-400 text-[9px] font-bold uppercase tracking-widest mb-1">Agent Conclusion</p>
                 <p className="text-white text-base font-black leading-snug">
-                  Deploy {opponentId === 'liverpool' ? '3-4-3 Wide Overload' : '5-3-2 Deep Block'} Protocol
+                  Deploy {opponentId === 'brazil' ? '3-4-3 Wide Overload' : '4-3-3 Mid-Block Counter'} Protocol
                 </p>
                 <p className="text-white/35 text-[11px] mt-1.5 leading-relaxed">
-                  {opponentId === 'liverpool'
+                  {opponentId === 'brazil'
                     ? 'Flood wide channels and exploit exposed fullback space on transitions within 4 seconds of press break.'
-                    : 'Absorb City\'s possession, neutralise Rodri, and spring fast counters on turnover.'}
+                    : 'Absorb Morocco\'s possession, neutralise Hakimi, and spring fast counters on turnover.'}
                 </p>
               </div>
               <ConfidenceRing
@@ -161,7 +161,7 @@ function TerminalView({ opponentId, onComplete }) {
 // ─── Reasoning view ───────────────────────────────────────────────────────────
 function ReasoningView({ opponentId, briefReady }) {
   const opp = OPPONENTS[opponentId]
-  const formationKey = opponentId === 'liverpool' ? '3-4-3' : '5-3-2'
+  const formationKey = opponentId === 'brazil' ? '3-4-3' : '4-3-3'
   const formation = FORMATIONS[formationKey]
 
   return (
@@ -184,7 +184,7 @@ function ReasoningView({ opponentId, briefReady }) {
 // ─── App root ─────────────────────────────────────────────────────────────────
 export default function App() {
   const [activeTab, setActiveTab] = useState('analysis')
-  const [opponentId, setOpponentId] = useState('liverpool')
+  const [opponentId, setOpponentId] = useState('brazil')
   const [briefReady, setBriefReady] = useState(false)
 
   const handleOpponentChange = (id) => {

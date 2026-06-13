@@ -16,8 +16,9 @@ const NavIcon = ({ type, active }) => {
 
 export default function Sidebar({ active, setActive, opponent, setOpponent }) {
   const opponents = [
-    { id: 'liverpool', name: 'Liverpool FC',      color: '#C8102E' },
-    { id: 'mancity',   name: 'Manchester City',   color: '#6CABDD' },
+    // CRITICAL FIX: IDs are perfectly matched to data.js keys in lowercase!
+    { id: 'brazil',  name: 'Brazil',   color: '#FFDF00' },
+    { id: 'morocco', name: 'Morocco',  color: '#C1272D' },
   ]
 
   return (
@@ -89,7 +90,7 @@ export default function Sidebar({ active, setActive, opponent, setOpponent }) {
           <span className="text-emerald-400 text-[10px] font-semibold">Agent Online</span>
         </div>
         <div className="text-[9px] text-white/18 leading-relaxed font-mono">
-          Microsoft Agents League<br />Hackathon Build 2025
+          Microsoft Agents League<br />Hackathon Build 2026
         </div>
       </div>
     </aside>
