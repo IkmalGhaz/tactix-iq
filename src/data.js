@@ -218,7 +218,7 @@ export const OPPONENTS = {
       { name: 'Dani Olmo',         pos: 'AM',  rating: 86, flag: '🇪🇸', note: 'Roaming creator — tracks back poorly, exploit space behind' },
       { name: 'Nico Williams',     pos: 'LW',  rating: 86, flag: '🇪🇸', note: 'Explosive pace on left — don\'t let him run at fullback 1v1' },
       { name: 'Marc Cucurella',    pos: 'LB',  rating: 83, flag: '🇪🇸', note: 'Adventurous LB — space behind him when he bombs forward' },
-      { name: 'Álvaro Morata',     pos: 'ST',  rating: 83, flag: '🇪🇸', note: 'Captain — intelligent movement. Track near-post runs' },
+      { name: 'Borja Iglesias',     pos: 'ST',  rating: 80, flag: '🇪🇸', note: 'Game Changer — intelligent movement. Track near-post runs' },
     ],
   },
 
